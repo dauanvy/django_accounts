@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    ports:
+      - "7005:5432"
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:7004
+    volumes:
+      - .:/code
+    ports:
+      - "7004:7004"
+    depends_on:
+      - db

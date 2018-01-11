@@ -1,0 +1,5 @@
+Django>=1.8,<2.0
+psycopg2
+django-widget-tweaks
+social-auth-app-django
+python-social-auth
